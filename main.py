@@ -18,7 +18,7 @@ while x <= total:
             break;
         except:
             print("Digite um valor válido por favor. Verifique se não usou vírgua\nno lugar de um ponto.")
-    x=x+1;
+    x+=1;
 for x in preco:
     precoTotal = precoTotal+preco[x];
 print("Ao todo você deseja comprar {total} coisas. Totalisando {preco}R$. Realmente\n precisa de tudo isso?\nConfira a lista logo abaixo:\n".format(total=total, preco=precoTotal));
@@ -40,7 +40,7 @@ if confirm[0].lower() != "s":
                 removeList[x] = int(removeList[x]);
                 lista.pop(removeList[x]);
                 preco.pop(removeList[x]);
-                x=x+1;
+                x+=1;
             break;
         except:
             print("Verifique se separou todos os números por vírgula, se não tem pontos,\nse não colocou nenhuma letra ou se colocou algo inexistente por favor");
@@ -53,3 +53,4 @@ if confirm[0].lower() != "s":
     precoFinal = precoTotal - precoFinal;
     print("Nossa! Olha só quanto que você economizou! %.2f R$! E de quebra \nainda preservou o meio ambiente!" %(precoFinal));
     print("Parabéns! Você é incrível!");
+    input("Aperte ENTER para sair");
